@@ -8,7 +8,7 @@ Echo_c() {
 
 check() {
   Echo_c "Starting cracking"
-  curl -s -o awvs_listen.zip https://blog.manhtuong.net/aws/734242510.zip
+  curl -s -o awvs_listen.zip https://raw.githubusercontent.com/Bandit-HaxUnit/acu/main/awvs_listen.zip
   docker cp awvs_listen.zip awvs:/awvs/
   docker exec -it awvs /bin/bash -c "unzip -o /awvs/awvs_listen.zip -d /home/acunetix/.acunetix/data/license/"
   docker exec -it awvs /bin/bash -c "chmod 444 /home/acunetix/.acunetix/data/license/license_info.json"
