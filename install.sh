@@ -16,6 +16,7 @@ check() {
   docker exec -it awvs /bin/bash -c "rm /awvs/awvs_listen.zip"
   docker exec -it awvs /bin/bash -c "echo '127.0.0.1 updates.acunetix.com' > /awvs/.hosts"
   docker exec -it awvs /bin/bash -c "echo '127.0.0.1 erp.acunetix.com' >> /awvs/.hosts"
+  docker exec -it awvs /bin/bash -c "echo '192.168.0.108 awvs.lan' >> /awvs/.hosts"
   docker restart awvs
   rm awvs_listen.zip
   Echo_c "Chech over!"
